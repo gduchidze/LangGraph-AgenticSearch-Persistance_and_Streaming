@@ -7,6 +7,7 @@ from langchain_community.tools.tavily_search import TavilySearchResults
 from IPython.display import Image
 
 
+
 from dotenv import load_dotenv
 _ = load_dotenv()
 
