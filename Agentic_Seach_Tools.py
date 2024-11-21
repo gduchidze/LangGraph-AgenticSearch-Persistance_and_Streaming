@@ -25,7 +25,7 @@ def search(query, max_results=6):
         return [i["href"] for i in results]
     except Exception as e:
         print(f"returning previous results due to exception reaching ddg.")
-        results = [ # cover case where DDG rate limits due to high deeplearning.ai volume
+        results = [
             "https://weather.com/weather/today/l/USCA0987:1:US",
             "https://weather.com/weather/hourbyhour/l/54f9d8baac32496f6b5497b4bf7a277c3e2e6cc5625de69680e6169e7e38e9a8",
         ]
