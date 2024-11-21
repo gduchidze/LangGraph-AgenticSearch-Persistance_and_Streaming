@@ -8,14 +8,8 @@ from duckduckgo_search import DDGS
 _ = load_dotenv()
 client = TavilyClient(api_key=os.environ.get("TAVILY_API_KEY"))
 
-# result = client.search("What is Capital of Country Georgia?",
-#                        include_answer=True)
-#
-# print(result["answer"])
-
-
-city = "Rustavi"
-query = f"What is the current weather in {city}?, Should i go out today? 'amindi.ge' "
+city = "Tbilisi"
+query = f"What is the current weather in {city}?, Should i go out today? "
 
 ddg = DDGS()
 
