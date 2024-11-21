@@ -67,7 +67,7 @@ Only look up information when you are sure of what you want. \
 If you need to look up some information before asking a follow up question, you are allowed to do that!
 """
 
-model = ChatOpenAI(model="gpt-3.5-turbo")  #reduce inference cost
+model = ChatOpenAI(model="gpt-4o-mini")
 abot = Agent(model, [tool], system=prompt)
 
 Image(abot.graph.get_graph().draw_png())
@@ -78,11 +78,11 @@ result = abot.graph.invoke({"messages": messages})
 print(result['messages'][-1].content)
 
 
-query = "Who won the Champions League in 2023/2024? In what Country is the winning team headquarters located? \
-What is the GDP of that Country? Answer each question."
+query = "Who won the USA elections in 2024? How many percent did Trump get in the election? \
+What is the GDP of the USA? Answer each question."
 messages = [HumanMessage(content=query)]
 
-model = ChatOpenAI(model="gpt-4o-mini")  # requires more advanced model
+model = ChatOpenAI(model="gpt-4o-mini")
 abot = Agent(model, [tool], system=prompt)
 result = abot.graph.invoke({"messages": messages})
 
