@@ -96,6 +96,3 @@ colorful_json = highlight(formatted_json,
                           formatters.TerminalFormatter())
 
 print(colorful_json)
-
-memory = SqliteSaver.from_conn_string(":memory:")
-
